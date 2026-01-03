@@ -9,7 +9,7 @@
 #outline(indent: auto) 
 
 = Matrix as Linear Map: Motivation behind Matrix-Vector Multiplication
-The concept of matrix is closely related to linear maps between vector spaces -- actually, they are two sides of the same coin. In this chapter, we will explore this relationship in detail.
+The concept of matrix is closely related to linear maps between vector spaces -- actually, they are two sides of the same coin. In this section, we will explore this relationship in detail.
 
 Let's first think about a linear map $cal(T)$ from a m-dimensional vector space $V$ to an n-dimensional vector space $W$. We can choose a basis ${v_1, v_2, ..., v_m}$ for $V$ and a basis ${w_1, w_2, ..., w_n}$ for $W$. For each basis vector $v_j$ in $V$, the image under the linear map $cal(T)$ can be expressed as a linear combination of the basis vectors in $W$:
   $ cal(T) v_j = sum_(i=0)^(n) A_(i, j) w_i $
@@ -57,3 +57,14 @@ where $A$ is a $m times n$ matrix and $v$ is a n-dimensional vector. Once we vie
 ]
 
 = Matrix as Linear Combination: Motivation behind Matrix-Matrix Multiplication
+In the previous section, we have seen how matrix-vector multiplication can be understood as applying a linear map to a vector when we know the matrix corresponding to that linear map and the coordinates of the vector in a chosen basis. Now, let's extend this idea to matrix-matrix multiplication.
+
+First, let's consider the matrix-vector multiplication example $A v$ from previous section, but in now we see the n-dimensional vector $v$ as a $n times 1$ matrix $V$:
+  $ v = mat(
+    x_1;
+    x_2;
+    dots;
+    x_n;
+  ) . $
+
+Then the matrix-vector multiplication $A v$ can be viewed as multiplying the $m times n$ matrix $A$ with the $n times 1$ matrix $V$, resulting in a $m times 1$ matrix. For each column of $A$, we may see it as a vector in $RR^m$. Thus, the multiplication $A v$ can be interpreted as taking a linear combination of the columns of $A$, weighted by the entries of the matrix $v$.

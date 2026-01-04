@@ -96,8 +96,8 @@
 #let fact = my_thmbox("fact", "Fact", base: "heading",
   fill: colors.note-bg, stroke: colors.note-stroke
 )
-#let proof = thmproof("proof", "Proof")
-#let remark = thmplain("remark", "Remark").with(base: "heading")
+#let proof = thmproof("proof", strong("Proof"))
+#let remark = thmplain("remark", strong("Remark")).with(base: "heading")
 
 // Math Helper (deprecated)
 #let vocab(x) = text(fill: rgb("#0000CD"), weight: "bold", x)
